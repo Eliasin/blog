@@ -1,0 +1,81 @@
+$sidebar-width: 15%;
+$active-color: #ffe66d;
+$inactive-color: #292f36;
+$sidebar-font: "Courier New";
+$title-font: "Sans Serif";
+$content-background-color: #292f36;
+$sidebar-background-color: #4ecdc4;
+$content-color: #f7fff7;
+$code-block-border-color: #ff6b6b;
+
+.sidebar {
+  height: 100%;
+  width: $sidebar-width;
+  overflow-wrap: break-word;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 5%;
+  font-family: $sidebar-font;
+  font-size: large;
+  background-color: $sidebar-background-color;
+  border-right: solid darkturquoise 2px;
+
+  > * {
+    margin: 10%;
+  }
+
+  div {
+    :not(:hover) {
+      color: $inactive-color;
+      text-decoration: none;
+    }
+
+    :hover {
+      color: $active-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+body {
+  background-color: $content-background-color;
+  color: $content-color;
+}
+
+.main-content {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: $sidebar-width;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  > * {
+    margin-left: 7%;
+  }
+  .title {
+    font-size: xx-large;
+    font-family: $title-font;
+  }
+
+  pre {
+    border: solid $code-block-border-color 1px;
+    padding: 1%;
+    width: 70%;
+  }
+}
+
+.blog-posts {
+  .title-link {
+    a {
+      font-size: large;
+    }
+
+    :not(:hover) {
+      color: $content-color;
+    }
+
+    :hover {
+      color: $active-color;
+    }
+  }
+}

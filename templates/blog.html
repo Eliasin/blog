@@ -4,9 +4,11 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-<ul>
+<ul class="blog-posts">
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <li><div class='title-link'>
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  </div></li>
   {% endfor %}
 </ul>
 {% endblock content %}

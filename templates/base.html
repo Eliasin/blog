@@ -3,13 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <title>Eliasin's Blog</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+  <div class="sidebar">
+    <h1>Eliasin's Blog</h1>
+    <div>
+      <a href="/">About</a>
+    </div>
+    <div>
+      <a href="/blog">Articles</a>
+    </div>
+  </div>
   <section class="section">
-    <div class="container">
+    <div class="container main-content">
       {% block content %} {% endblock %}
     </div>
   </section>
